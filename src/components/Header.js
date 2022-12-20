@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import Projects from './body-components/Projects';
 import Work from './body-components/Work';
-import Contact from './body-components/Contact';
+import Contact from './body-components/Contact'; 
+
+import logo from './body-components/lukeshortdev.png';
 
 export default function Header() {
    
@@ -30,7 +32,46 @@ export default function Header() {
 
     return (
         <div className='header-main'>
-        <motion.div  animate={{ scale: 1.1 }} transition={{duration: 1.5}}
+
+
+            <div className='navbar-container'>
+              <div className='navbar-logo-container'>
+                <img src={logo} className="navbar-logo"></img>
+              </div>
+              <div className='navbar-links-container'>
+              <motion.div animate={{opacity: 1}} transition={{duration: 1}} className='header-links-container'>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "3" ? "header-link active" : "header-link"} id={"3"} onClick={handleClickProjects}  >PROJECTS</motion.button>
+                </motion.div>
+              </div>
+            </div>
+            <div className='biography-container'>
+                <div className='header-profile'>
+
+                </div>
+                <div className='biograpy-desc-container'>
+                    <div className='biography-title'>
+                        Hi, I'm Luke Short
+                    </div>
+                    <div className='biography-desc'>
+                    I'm a developer from Hurricane, WV. I'm currently working at <a class="inner-link" href='https://bulldogcreative.com' target="_blank">Bulldog Creative Services</a> in Huntington, WV.
+                        I design and develop full-stack web applications. My favorite tools are React, .NET, and Go. Check out some of
+                        my work below.
+                    </div>
+                    <div className='bio-socials-container'>
+               <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://www.linkedin.com/in/luke-short-272434b8/" target="_BLANK"> <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img></motion.a>
+                <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://github.com/kuel321" target="blank" ><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img></motion.a>
+            </div> 
+                </div>
+                
+             
+            </div>
+
+
+
+
+        {/* <motion.div  animate={{ scale: 1.1 }} transition={{duration: 1.5}}
          className='header-container'>
             <div className='header-profile'>
 
@@ -39,9 +80,9 @@ export default function Header() {
                 <div animate={{ x: 100 }} className='header-name' >LUKE SHORT</div>
                 <div className='little-line'></div>
                 <motion.div animate={{opacity: 1, x: 80}} initial={{opacity: 0, x:0}} transition={{duration: 1}} className='header-links-container'>
-                    <button  className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</button>
-                    <button className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</button>
-                    <button className={active === "3" ? "header-link active" : "header-link"} id={"3"} onClick={handleClickProjects}  >PROJECTS</button>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
+                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "3" ? "header-link active" : "header-link"} id={"3"} onClick={handleClickProjects}  >PROJECTS</motion.button>
                 </motion.div>
 
                
@@ -56,7 +97,7 @@ export default function Header() {
             }} transition={{duration: 1}} className='bio-desc-container'>
                     <p className='bio-desc'>
                         I'm a developer from Hurricane, WV. I'm currently working at Bulldog Creative Services in Huntington, WV.
-                        I design and develop full-stack web applications. My favorite tools are React, .NET, and Node. Check out some of
+                        I design and develop full-stack web applications. My favorite tools are React, .NET, and Go. Check out some of
                         my work below.
                         
                     </p>
@@ -64,11 +105,11 @@ export default function Header() {
                 </motion.div>
             </motion.div>
             <div className='bio-socials-container'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img>
+               <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://www.linkedin.com/in/luke-short-272434b8/" target="_BLANK"> <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img></motion.a>
+                <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://github.com/kuel321" target="blank" ><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img></motion.a>
+            </div> 
             </div>
-            </div>
-
+*/}
 
             <div className='selected-component-container'>
                 {componentSelection}

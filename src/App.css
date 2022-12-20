@@ -1,13 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 :root {
   --columbia-blue: rgb(222, 244, 251);
 --alice-blue: #D8E9EFff;
 --blue-yonder: #567095ff;
 --cultured: #F8FAFAff;
 --blast-off-bronze: #B17866ff;
---off-black: #191a1d;
-
+--off-black: #333333;
+--good-font: 'Rubik', sans-serif;
+--good-color: #333333;
 }
-
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -17,9 +20,10 @@ html {
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
+
 h1 {
   font-family: 'Cabin', sans-serif;
-  color: var(--off-black);
+  color: var(--good-color);
 }
 p {
   cursor: default;
@@ -41,35 +45,40 @@ button {
 }
 
 body {
-  background-color: var(--columbia-blue);
+  background-color: #ffffff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
-.App {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1024px;
-  width: 100%;
-  padding: 80px 30px 30px;
-}
+
 
 
 .header-profile{
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  box-shadow: 43px 24px 25px -12px rgba(0,0,0,0.16);
-  -webkit-box-shadow: 43px 24px 25px -12px rgba(0,0,0,0.16);
-  -moz-box-shadow: 43px 24px 25px -12px rgba(0,0,0,0.16);
+ 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
  background-image: url('./media/luke-headshot.png');
+}
+
+
+.navbar-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 22px;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar-logo {
+  width: 200px;
 }
 
 .header-container {
@@ -129,11 +138,44 @@ body {
 }
 
 .header-link {
+  font-size: 20px;
   margin-top: 5px;
   color: var(--off-black);
-  font-family: 'Cabin', sans-serif;
+  font-family: var(--good-font);
+  
 }
 
+
+.inner-link {
+  font-weight: bold;
+  color: var(--good-color);
+  text-decoration: none;
+
+}
+
+.inner-link{
+  display: inline-block;
+  position: relative;
+  color: var(--good-color);
+}
+
+.inner-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue-yonder);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.inner-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 /* --- Bio --- */
 
@@ -150,7 +192,7 @@ body {
 .bio-desc {
   cursor: default;
   
-  font-family: 'Cabin', sans-serif;
+  font-family: var(--good-font);
   line-height: 130%;
 }
 
@@ -190,21 +232,53 @@ body {
   font-size: 20px;
 }
 .component-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-left: -2rem;
 
-  width: calc(100% + 290px);
+  width: 100%;
     position: relative;
     left: 50%;
     transform: translate(-50%);
 }
 
+.work {
+  padding-left: 400px;
+  padding-right: 400px;
+}
 
+.biography-container {
+    margin-top: 5rem;
+    padding-left: 400px;
+    padding-right: 400px;
+    display: flex;
+    flex-direction: row;
+}
 
+.biograpy-desc-container {
+  max-width: 600px;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+.biography-desc {
+  color: var(--good-color);
+
+  font-size: 20px;
+  line-height: 33px;
+}
+
+.biography-title {
+  margin-top: 15px;
+  font-family: var(--good-font);
+  color: var(--good-color);
+  
+  font-size: 50px;
+  font-weight: bold;
+}
 
 
 .work-img {
-  width: 800px;
+  width: 550px;
   border-radius: 10px;
   box-shadow: 6px 11px 21px -10px rgba(0,0,0,0.75);
   -webkit-box-shadow: 6px 11px 21px -10px rgba(0,0,0,0.75);
@@ -220,16 +294,17 @@ body {
 }
 
 .work-card-description-container {
-
+    max-width: 550px;
 }
 
 .work-title {
-  font-size: 55px;
+  font-size: 42px;
   margin-bottom: -0.5rem;
+ 
 }
 
 .work-desc {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 150%;
 }
 
@@ -257,6 +332,7 @@ body {
 }
 
 .bio-socials-container {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -270,3 +346,43 @@ body {
   
 }
 
+
+@media only screen and (max-width: 768px) {
+
+  .navbar-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    width: 100px;
+  }
+
+  .biography-title {
+    font-size: 35px;
+  }
+  .biography-desc {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .biograpy-desc-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  }
+  
+  .biography-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 2rem;
+  }
+}
