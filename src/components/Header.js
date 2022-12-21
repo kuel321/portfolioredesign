@@ -2,76 +2,76 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import Projects from './body-components/Projects';
 import Work from './body-components/Work';
-import Contact from './body-components/Contact'; 
+import Contact from './body-components/Contact';
 
 import logo from './body-components/lukeshortdev.png';
 
 export default function Header() {
-   
+
     const [activeButton, setActiveButton] = useState(false);
     const [componentSelection, setSelection] = useState(< Work />);
-   
+
     const [active, setActive] = useState("1");
- 
+
     const handleClickWork = (event) => {
-      setActive(event.target.id);
-      setSelection(<Work />)
+        setActive(event.target.id);
+        setSelection(<Work />)
     }
 
     const handleClickContact = (event) => {
         setActive(event.target.id);
         setSelection(<Contact />)
-      }
+    }
 
-      const handleClickProjects = (event) => {
+    const handleClickProjects = (event) => {
         setActive(event.target.id);
         setSelection(<Projects />)
-      }
-  
-    
+    }
+
+
 
     return (
         <div className='header-main'>
 
 
             <div className='navbar-container'>
-              <div className='navbar-logo-container'>
-                <img src={logo} className="navbar-logo"></img>
-              </div>
-              <div className='navbar-links-container'>
-              <motion.div animate={{opacity: 1}} transition={{duration: 1}} className='header-links-container'>
-                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
-                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
-                    <motion.button whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className={active === "3" ? "header-link active" : "header-link"} id={"3"} onClick={handleClickProjects}  >PROJECTS</motion.button>
+                <div className='navbar-logo-container'>
+                    <motion.img  animate={{opacity: 1, x:0}} transition={{duration: 1, delay: 0.1}} initial={{x:-400}}  src={logo} className="navbar-logo"></motion.img>
+                </div>
+                <motion.div animate={{opacity: 1, y:0}} transition={{duration: 1, delay: 0.3}} initial={{y:-300}} className='navbar-links-container'>
+                    <motion.div animate={{ opacity: 1 }} transition={{ duration: 1 }} className='header-links-container'>
+                        <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
+                        <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
+             
+                    </motion.div>
                 </motion.div>
-              </div>
             </div>
             <div className='biography-container'>
-                <div className='header-profile'>
+                <motion.div animate={{ opacity: 1}} transition={{ duration: 1 }} initial={{ opacity:0 }} className='header-profile'>
 
-                </div>
-                <div className='biograpy-desc-container'>
-                    <div className='biography-title'>
+                </motion.div>
+                <motion.div className='biograpy-desc-container'>
+                    <motion.div animate={{opacity: 1, y:0}} transition={{duration: 1, delay: 1}} initial={{y:-300}} className='biography-title'>
                         Hi, I'm Luke Short
-                    </div>
-                    <div className='biography-desc'>
-                    I'm a developer from Hurricane, WV. I'm currently working at <a class="inner-link" href='https://bulldogcreative.com' target="_blank">Bulldog Creative Services</a> in Huntington, WV.
+                    </motion.div>
+                    <motion.div animate={{opacity: 1, y:0}} transition={{duration: 1, delay: 0.5}} initial={{y:-400}} className='biography-desc'>
+                        I'm a developer from Hurricane, WV. I'm currently working at <a class="inner-link" href='https://bulldogcreative.com' target="_blank">Bulldog Creative Services</a> in Huntington, WV.
                         I design and develop full-stack web applications. My favorite tools are React, .NET, and Go. Check out some of
                         my work below.
-                    </div>
+                    </motion.div>
                     <div className='bio-socials-container'>
-               <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://www.linkedin.com/in/luke-short-272434b8/" target="_BLANK"> <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img></motion.a>
-                <motion.a whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} href="https://github.com/kuel321" target="blank" ><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img></motion.a>
-            </div> 
-                </div>
-                
-             
+                        <motion.a animate={{opacity: 1}} transition={{duration: 1, delay: 1.2}} initial={{opacity:0}} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} href="https://www.linkedin.com/in/luke-short-272434b8/" target="_BLANK"> <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img></motion.a>
+                        <motion.a animate={{opacity: 1}} transition={{duration: 1, delay: 1.5}} initial={{opacity:0}} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} href="https://github.com/kuel321" target="blank" ><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img></motion.a>
+                    </div>
+                </motion.div>
+
+
             </div>
 
 
 
 
-        {/* <motion.div  animate={{ scale: 1.1 }} transition={{duration: 1.5}}
+            {/* <motion.div  animate={{ scale: 1.1 }} transition={{duration: 1.5}}
          className='header-container'>
             <div className='header-profile'>
 

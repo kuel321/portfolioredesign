@@ -34,6 +34,32 @@ div {
   cursor: default;
 }
 
+.contact-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.bigger {
+  font-size: 25px;
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 55px;
+  color: var(--good-color);
+  font-weight: bold;
+ 
+}
+
+.contact-desc-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 button {
 	background: none;
 	color: inherit;
@@ -56,6 +82,7 @@ body {
 .header-profile{
   display: inline-block;
   width: 100px;
+  min-width: 100px;
   height: 100px;
   border-radius: 50%;
  
@@ -217,7 +244,7 @@ body {
 
 .work-intro-container {
   margin-left: -2rem;
-  margin-top: 3rem;
+ 
 }
 
 .work-intro-container h1 {
@@ -242,14 +269,18 @@ body {
 }
 
 .work {
-  padding-left: 400px;
-  padding-right: 400px;
+  display: flex;
+  justify-content: center;
+ 
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
 }
 
 .biography-container {
     margin-top: 5rem;
-    padding-left: 400px;
-    padding-right: 400px;
+   justify-content: center;
+   margin-right: 400px;
     display: flex;
     flex-direction: row;
 }
@@ -382,7 +413,46 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    margin-right: 0rem;
     margin-top: 2rem;
+  }
+
+  .work-card {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+
+
+  .work-intro-container {
+    margin-left: 0rem;
+    margin-top: -3rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .work-intro-container h1 {
+    font-size: 45px;
+  }
+
+  .work {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .component-container {
+    margin-left: 0rem;
+    position: static;
+    left: 0%;
+    transform: translate(0%);
+  }
+
+  .work-intro-container p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .work-img {
+    width: 300px;
   }
 }
