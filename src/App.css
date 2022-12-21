@@ -366,10 +366,15 @@ body {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
   gap: 10px;
   width: 100px;
   align-items: flex-start;
+}
+
+.resume-link {
+  margin-top: 10px;
+  width: 100%;
 }
 
 .bio-socials-container img {

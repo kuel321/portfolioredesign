@@ -42,6 +42,7 @@ export default function Header() {
                     <motion.div animate={{ opacity: 1 }} transition={{ duration: 1 }} className='header-links-container'>
                         <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
                         <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
+                     
              
                     </motion.div>
                 </motion.div>
@@ -62,6 +63,7 @@ export default function Header() {
                     <div className='bio-socials-container'>
                         <motion.a animate={{opacity: 1}} transition={{duration: 1, delay: 1.2}} initial={{opacity:0}} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} href="https://www.linkedin.com/in/luke-short-272434b8/" target="_BLANK"> <img src='https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg' className='linkedin-icon'></img></motion.a>
                         <motion.a animate={{opacity: 1}} transition={{duration: 1, delay: 1.5}} initial={{opacity:0}} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} href="https://github.com/kuel321" target="blank" ><img src='https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg' className='github-icon'></img></motion.a>
+                        <motion.a animate={{opacity: 1}} transition={{duration: 1, delay: 1.8}} initial={{opacity:0}} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className='inner-link resume-link' href="https://lukeshort.dev/lukeshortresume.pdf" target="_blank">Resume</motion.a>
                     </div>
                 </motion.div>
 
