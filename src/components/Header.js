@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Projects from './body-components/Projects';
 import Work from './body-components/Work';
 import Contact from './body-components/Contact';
+import Footer from './body-components/Footer';
 
 import logo from './body-components/lukeshortdev.png';
 
@@ -33,7 +34,7 @@ export default function Header() {
     return (
         <div className='header-main'>
 
-
+            <div className='for-header-background'>
             <div className='navbar-container'>
                 <div className='navbar-logo-container'>
                     <motion.img  animate={{opacity: 1, x:0}} transition={{duration: 1, delay: 0.1}} initial={{x:-400}}  src={logo} className="navbar-logo"></motion.img>
@@ -68,6 +69,7 @@ export default function Header() {
                 </motion.div>
 
 
+            </div>
             </div>
 
 
@@ -113,9 +115,10 @@ export default function Header() {
             </div>
 */}
 
-            <div className='selected-component-container'>
+            <motion.div  className='selected-component-container'>
                 {componentSelection}
-            </div>
+                <Footer />
+            </motion.div>
 
 
         </div>

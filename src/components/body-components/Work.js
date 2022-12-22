@@ -36,7 +36,7 @@ export default function Work() {
 
         <div className='work-card'>
             <motion.div whileHover={{scale: 1.04}} whileTap={{ scale: 0.99 }} className='work-img-container'>
-          <a href='https://keithalbee.com/  target="_blank"'> <img className='work-img' src={example2}></img></a>
+          <a href='https://keithalbee.com/' target="_blank"> <img className='work-img' src={example2}></img></a>
             </motion.div>
             <div className='work-card-description-container'>
                <h1 className='work-title'>
@@ -63,7 +63,7 @@ export default function Work() {
                 Event management system built for Mingo County, WV. This site features an extensive in-house built calendar event system created by me. 
                 The event system allows anyone to submit an event to be approved by an admin. After approval, the event can be displayed on the calendar. 
                 The calendar was built primarily with pure Javascript and jQuery with some PHP. Built in WordPress.</p>
-               <motion.a initial={{background: "#079ace"}} whileHover={{background: "#567095ff", color: "#ffffff"}} href="https://mingowv.com/" className='view-site-link'>View Site</motion.a>
+               <motion.a target="_blank" initial={{background: "#079ace"}} whileHover={{background: "#567095ff", color: "#ffffff"}} href="https://mingowv.com/" className='view-site-link'>View Site</motion.a>
             </div>
         </div>
 

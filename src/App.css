@@ -1,6 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+.for-header-background {
+  background-image: url('./components/body-components/lineback.svg');
+  background-size:cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  
+ 
+}
 
+
+
+.component-container-main {
+  background-image: url('./components/body-components/lineback2.svg');
+  background-size:cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
 :root {
   --columbia-blue: rgb(222, 244, 251);
 --alice-blue: #D8E9EFff;
@@ -11,15 +27,35 @@
 --good-font: 'Rubik', sans-serif;
 --good-color: #333333;
 }
-html {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+
+
+.footer-container {
+  color: white;
+  height: 100px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  
+  align-items: flex-end;
 }
 
+.bottom-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+  margin-bottom: 4rem;
+}
+
+
+
+.footer-copyright {
+  margin-left: 2rem;
+  font-size: 15px;
+  color: white;
+  font-family: var(--good-font);
+  
+}
 
 h1 {
   font-family: 'Cabin', sans-serif;
@@ -34,12 +70,21 @@ div {
   cursor: default;
 }
 
+.contact-container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
 .contact-container {
+  
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  margin-bottom: 4rem;
 }
 
 .bigger {
@@ -374,7 +419,7 @@ body {
 
 .resume-link {
   margin-top: 10px;
-  width: 100%;
+  
 }
 
 .bio-socials-container img {
