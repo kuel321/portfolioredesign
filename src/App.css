@@ -31,9 +31,9 @@
 
 .footer-container {
   color: white;
-  height: 100px;
+  height: 20px;
   display: flex;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
   
   align-items: flex-end;
@@ -52,7 +52,7 @@
 .footer-copyright {
   margin-left: 2rem;
   font-size: 15px;
-  color: white;
+  color: black;
   font-family: var(--good-font);
   
 }
