@@ -3,12 +3,12 @@ import emailjs from 'emailjs-com';
 import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
 import { motion } from "framer-motion"
-import 'semantic-ui-css/semantic.min.css';
+import 'semantic-ui-css/semantic.css';
 
 
-const SERVICE_ID = "**************";
-const TEMPLATE_ID = "*******";
-const USER_ID = "****************";
+const SERVICE_ID = "service_gpkj0de";
+const TEMPLATE_ID = "template_7j62ty9";
+const USER_ID = "cqrUkhfmoC3CmiCC1";
 
 const Footer = () => {
   const handleOnSubmit = (e) => {
@@ -32,7 +32,7 @@ const Footer = () => {
   };
 
 return (
-  <motion.div animate={{opacity:1}} initial={{opacity: 0}} transition={{duration: 1, delay: 0.5}} className='component-container-main work'>
+  <motion.div animate={{opacity:1}} initial={{opacity: 0}} transition={{duration: 1, delay: 0.5}} className='component-container-main  contact'>
     <motion.div className="contact-container-main">
       <div className='contact-container-desc'>
       <div className='contact-title'>Send me a message!</div>
@@ -67,16 +67,15 @@ return (
           placeholder='Message…'
           required
         />
-        <Button type='submit' color='green'>Submit</Button>
+        <Button type='submit' class="contact-page-submit-button">Submit</Button>
       </Form>
       </div>
-      <div className='bottom-contact'>
-       <a className='inner-link'>lukeshort321@gmail.com</a>
-       <a className='inner-link'>304-982-0128</a>
-      </div>
+      
       
     </motion.div>
-    <div className='empty-box'></div>
+    <div className='contact-title smaller'>Other ways to contact:</div>
+    <div className='contact-title smaller-er'><a class="contactme-link" href="mailto:lukeshort321@gmail.com">lukeshort321@gmail.com</a>
+    <a class="contactme-link" href="tel:304-982-0128">304-982-0128</a></div>
     </motion.div>
   );
 }

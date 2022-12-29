@@ -11,11 +11,13 @@
 
 
 
+
 .component-container-main {
   background-image: url('./components/body-components/lineback2.svg');
   background-size:cover;
   background-position: top;
   background-repeat: no-repeat;
+  height: 100% + 10vh;
 }
 :root {
   --columbia-blue: rgb(222, 244, 251);
@@ -28,10 +30,18 @@
 --good-color: #333333;
 }
 
+.contact {
+  height: 90vh;
+}
+
+input, textarea  {
+  background-color: var(--good-color) !important;
+  color: white !important;
+}
 
 .footer-container {
   color: white;
-  height: 20px;
+  height: 37px;
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -39,6 +49,18 @@
   align-items: flex-end;
 }
 
+.contact-page-submit-button {
+  background-color: #567095;
+}
+
+#root > div > div > div.selected-component-container > div.component-container-main.work > div.contact-container-main > div.contact-container > form > button {
+  background-color: #567095;
+  color: white;
+}
+
+label::after {
+  display: none !important;
+}
 .bottom-contact {
   display: flex;
   flex-direction: column;
@@ -68,6 +90,34 @@ p {
 
 div {
   cursor: default;
+}
+
+.smaller {
+  font-size: 30px !important;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+
+.contactme-link {
+  font-size: 20px !important;
+  margin-left: 2rem;
+  margin-top:1rem;
+  width: 300px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.smaller-er {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactme-link:hover {
+  color: var(--good-color);
 }
 
 .contact-container-main {
@@ -347,7 +397,7 @@ body {
   margin-top: 15px;
   font-family: var(--good-font);
   color: var(--good-color);
-  
+  line-height: normal;
   font-size: 50px;
   font-weight: bold;
 }
@@ -504,5 +554,29 @@ body {
 
   .work-img {
     width: 300px;
+  }
+
+  .component-container-main {
+    background-image: none;
+  }
+
+  .contact-title {
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-align:center;
+    align-items: center;
+  }
+ .footer-copyright {
+  text-align: center;
+  margin-left: 0rem;
+ }
+  .contactme-link {
+    color: var(--good-color);
+    margin-left: 0rem;
+    font: var(--good-font);
+  }
+
+  .smaller {
+    margin-left: 0rem;
   }
 }
