@@ -4,7 +4,7 @@ import Projects from './body-components/Projects';
 import Work from './body-components/Work';
 import Contact from './body-components/Contact';
 import Footer from './body-components/Footer';
-
+import { Outlet, Link } from "react-router-dom";
 import logo from './body-components/lukeshortdev.png';
 
 export default function Header() {
@@ -42,6 +42,7 @@ export default function Header() {
                 <motion.div animate={{opacity: 1, y:0}} transition={{duration: 1, delay: 0.3}} initial={{y:-300}} className='navbar-links-container'>
                     <motion.div animate={{ opacity: 1 }} transition={{ duration: 1 }} className='header-links-container'>
                         <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "1" ? "header-link active" : "header-link"} id={"1"} onClick={handleClickWork}  >WORK</motion.button>
+                        <Link to="/blog">Blogs</Link>
                         <motion.button whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.99 }} className={active === "2" ? "header-link active" : "header-link"} id={"2"} onClick={handleClickContact}  >CONTACT</motion.button>
                      
              
