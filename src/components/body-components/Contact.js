@@ -73,9 +73,11 @@ return (
       
       
     </motion.div>
+    <div className='bottom-contact-body'>
     <div className='contact-title smaller'>Other ways to contact:</div>
     <div className='contact-title smaller-er'><a class="contactme-link" href="mailto:lukeshort321@gmail.com">lukeshort321@gmail.com</a>
     <a class="contactme-link" href="tel:304-982-0128">304-982-0128</a></div>
+    </div>
     </motion.div>
   );
 }

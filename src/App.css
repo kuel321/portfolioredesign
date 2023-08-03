@@ -49,6 +49,12 @@ input, textarea  {
   align-items: flex-end;
 }
 
+.bottom-contact-body {
+  margin-top:3rem;
+  margin-bottom: 3rem;
+  display:none;
+}
+
 .contact-page-submit-button {
   background-color: #567095;
 }

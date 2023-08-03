@@ -57,8 +57,8 @@ export default function Header() {
                         Hi, I'm Luke Short
                     </motion.div>
                     <motion.div animate={{opacity: 1, y:0}} transition={{duration: 1, delay: 0.5}} initial={{y:-400}} className='biography-desc'>
-                        I'm a developer from Hurricane, WV. I'm currently working at <a class="inner-link" href='https://bulldogcreative.com' target="_blank">Bulldog Creative Services</a> in Huntington, WV.
-                        I design and develop full-stack web applications. My favorite tools are React, .NET, and Go. Check out some of
+                        I'm an AWS certified developer from Hurricane, WV. I'm currently working at <a class="inner-link" href='https://www.raven-solutions.com/' target="_blank">Raven Solutions</a>.  
+                        I design and develop full-stack web applications. My favorite tools are React, .NET, Sencha, and WordPress. Check out some of
                         my work below.
                     </motion.div>
                     <div className='bio-socials-container'>
